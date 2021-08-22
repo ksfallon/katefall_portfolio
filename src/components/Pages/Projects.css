@@ -1,0 +1,49 @@
+/* .projcard {
+    background-color: black;
+    }
+
+.projcard :hover {
+    color: white;
+    background-color: rgb(30, 30, 75) opacity(.4);
+    -webkit-transform: scale(1.01);
+} */
+
+.container {
+    /* position: relative; */
+    width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    /* display: block; */
+    width: auto;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+.text {
+    color: gray;
+    position: center;
+    /* visibility: hidden; */
+}
+
+p.title {
+    background-color: black(0.6)
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+  
+  .middle:hover  {
+    color: black;
+    filter: none;
+        -webkit-transform: scale(1.01);
+  }
+
+  .text:hover {
+      color: black;
+      font-weight: bold;
+  }
+  
