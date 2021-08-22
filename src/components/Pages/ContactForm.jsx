@@ -11,7 +11,7 @@ const Contact = (props) => {
     </header>
     <Card className="w-50 mx-auto">
       <CardBody className="align-center">
-        <CardTitle tag="h5" className="text-center">Just fill out this form</CardTitle>
+        <CardTitle tag="h5" className="text-center ">Just fill out this form</CardTitle>
         <CardSubtitle tag="h6" className="mb-2 text-center">I will get back to you as soon as I can.</CardSubtitle>
       <Form>
         <FormGroup>
@@ -30,7 +30,7 @@ const Contact = (props) => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="exampleText">Text Area</Label>
+          <Label for="exampleText">Additional Info</Label>
           <Input type="textarea" name="text" id="exampleText" />
         </FormGroup>
 
