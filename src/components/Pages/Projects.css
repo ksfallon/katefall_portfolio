@@ -32,7 +32,15 @@ p.title {
     background-color: black(0.6)
 }
 
-.container:hover .image {
+.container:hover #image1 {
+    opacity: 0.3;
+}
+
+.container:hover #image2 {
+    opacity: 0.3;
+}
+
+.container:hover #image3 {
     opacity: 0.3;
 }
   
