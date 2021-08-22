@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  // Collapse,
   Navbar,
-  // NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-//   UncontrolledDropdown,
-//   DropdownToggle,
-//   DropdownMenu,
-//   DropdownItem,
   NavbarText
 } from 'reactstrap';
 
@@ -20,8 +14,6 @@ const NavigationBar = ({ currentPage, handlePageChange }) => {
     <div>
       <Navbar color="light" light expand="md" className="navBar">
         <NavbarBrand>Katelin Fallon</NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} /> */}
-        {/* <Collapse isOpen={isOpen} navbar> */}
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink 
@@ -34,10 +26,15 @@ const NavigationBar = ({ currentPage, handlePageChange }) => {
                 About Me
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink 
-              href="/components/">Projects</NavLink>
-            </NavItem>
+            <NavLink 
+              href="#project"
+              onClick={() => handlePageChange('Projects')}
+              // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+              // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+              className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+              >
+                Projects
+              </NavLink>
             <NavItem>
               <NavLink href="/components/">Contact Me</NavLink>
             </NavItem>
