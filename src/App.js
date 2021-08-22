@@ -1,14 +1,6 @@
-import './App.css';
-// import { Button } from 'reactstrap';
-import PortfolioPage from './components/PortfolioPage.jsx'
+import React from "react";
+import PortfolioPage from "./components/PortfolioPage.jsx";
 
-function App() {
-  return (
-    <div className="App">
-    <PortfolioPage/>
-    </div>
-    
-  );
-}
+const App = () => <PortfolioPage />;
 
 export default App;

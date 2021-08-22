@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
+  // Collapse,
   Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
@@ -13,28 +13,33 @@ import {
 //   DropdownItem,
   NavbarText
 } from 'reactstrap';
-import Projects from '../Projects/Projects'
 
-const NavigationBar = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+const NavigationBar = ({ currentPage, handlePageChange }) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Katelin Fallon</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+      <Navbar color="light" light expand="md" className="navBar">
+        <NavbarBrand>Katelin Fallon</NavbarBrand>
+        {/* <NavbarToggler onClick={toggle} /> */}
+        {/* <Collapse isOpen={isOpen} navbar> */}
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">About Me</NavLink>
+              <NavLink 
+              href="#about"
+              onClick={() => handlePageChange('About')}
+              // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+              // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+              className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+              >
+                About Me
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">Projects</NavLink>
+              <NavLink 
+              href="/components/">Projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Contact Me</NavLink>
+              <NavLink href="/components/">Contact Me</NavLink>
             </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -55,7 +60,7 @@ const NavigationBar = (props) => {
             </UncontrolledDropdown> */}
           </Nav>
           <NavbarText>Simple Text</NavbarText>
-        </Collapse>
+        {/* </Collapse> */}
       </Navbar>
     </div>
   );
