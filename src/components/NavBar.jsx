@@ -35,9 +35,15 @@ const NavigationBar = ({ currentPage, handlePageChange }) => {
               >
                 Projects
               </NavLink>
-            <NavItem>
-              <NavLink href="/components/">Contact Me</NavLink>
-            </NavItem>
+            <NavLink 
+              href="#contact"
+              onClick={() => handlePageChange('Contact')}
+              // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+              // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+              className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+              >
+                Contact Me
+              </NavLink>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
