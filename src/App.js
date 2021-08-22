@@ -1,12 +1,13 @@
 import './App.css';
 // import { Button } from 'reactstrap';
-import Header from './components/Header/Header.jsx'
+import PortfolioPage from './components/PortfolioPage.jsx'
 
 function App() {
   return (
     <div className="App">
-    <Header />
+    <PortfolioPage/>
     </div>
+    
   );
 }
 
