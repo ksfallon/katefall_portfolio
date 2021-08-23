@@ -1,8 +1,4 @@
-.cardContact {
-    background-color: #7a7adb;
-    color: rgb(22, 20, 22);
-    font-size: 26px;
-}
+
 
 .titleContact {
     font-size: 60px;
@@ -14,4 +10,10 @@
 
 .introPlus {
     font-size: 26px
+}
+
+.cardContact {
+    background-color: #7a7adb;
+    color: rgb(22, 20, 22);
+    font-size: 26px;
 }
